@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img src="favicon.ico" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            Configurable Forms
+        </a>
+        <div class="flex-grow-1">
+            <ul class="navbar-nav">
+                @for (link of links; track link) {
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="link.fragment" routerLinkActive="active">{{ link.title }}</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
